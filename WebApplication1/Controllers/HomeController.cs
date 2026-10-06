@@ -11,6 +11,11 @@ namespace WebApplication1.Controllers
             return View();
         }
 
+        public IActionResult Profile()
+        {
+            return View();
+        }
+
         public IActionResult Portfolio()
         {
             var portfolioViewModel = new Portfolio_View_Model.ProfileModel
@@ -23,9 +28,9 @@ namespace WebApplication1.Controllers
                         Title = "CirculatePH",
                         Subtitle = "Emergency Blood Coordination Platform",
                         Description = "Developed for the CodeKada 2026 Hackathon as part of Team Dos Tres. A digital platform designed to streamline emergency blood coordination and donor matching.",
-                        TechStack = new List<string> { "ASP.NET Core MVC", "C#", "SQL Server", "Bootstrap" },                       
-                        Category = "Hackathon / Health Technology", 
-                        Url ="https://drive.google.com/drive/folders/1KFCJ8u2IWVqE1wMqVDtbaeN-R1lM89gZ"
+                        TechStack = new List<string> { "ASP.NET Core MVC", "C#", "SQL Server", "Bootstrap" },
+                        Category = "Hackathon / Health Technology",
+                        Url = "https://drive.google.com/drive/folders/1KFCJ8u2IWVqE1wMqVDtbaeN-R1lM89gZ"
                     },
                     new Portfolio_View_Model.ProjectItem
                     {
@@ -36,7 +41,7 @@ namespace WebApplication1.Controllers
                         TechStack = new List<string> { "Typescript", "JavaScript", "HTML" },
                         Category = "Environmental Web Application / Data Visualization",
                         Url = "https://biotrack-ph.figma.site/"
-                    }   
+                    }
                 }
             };
 
