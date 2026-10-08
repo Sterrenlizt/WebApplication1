@@ -6,8 +6,8 @@
 
 <div class="container my-5">
     <div class="text-center mb-5">
-        <h1 class="display-5 fw-bold">Aliza R.'s Featured Projects</h1>
-        <p class="lead">A collection of Aliza R's projects.</p>
+        <h1 class="display-5 fw-bold">Ali R.'s Portfolio</h1>
+        <p class="lead">A collection of Ali R's works.</p>
     </div>
 
     <div class="row g-4">
@@ -38,5 +38,73 @@
                 </div>
             </div>
         }
+    </div>
+</div>
+
+<div class="row mt-5">
+    <div class="col-12">
+        <div class="card p-4 p-md-5 shadow-sm">
+            <div class="d-flex justify-content-between align-items-center border-bottom border-secondary pb-3 mb-4">
+                <h3 class="fw-bold mb-0">Visual Projects</h3>
+                <span class="badge badge-category px-3 py-2">Creative Works</span>
+            </div>
+
+            <div style="column-count: 3; column-gap: 1rem;" class="d-none d-md-block">
+                <img src="~/images/JANUARY FB PFP + WALL COVER-1.png" class="img-fluid rounded border border-secondary mb-3 w-100" alt="Media Asset 1" />
+                <img src="~/images/JANUARY FB PFP + WALL COVER-2.png" class="img-fluid rounded border border-secondary mb-3 w-100" alt="Media Asset 2" />
+                <img src="~/images/RUMBAOA_Activity 6.png" class="img-fluid rounded border border-secondary mb-3 w-100" alt="Media Asset 3" />
+                <img src="~/images/BSCS 3-2_Branding Proposal (1).png" class="img-fluid rounded border border-secondary mb-3 w-100" alt="Media Asset 4" />
+                <img src="~/images/2TRESures CNY PubMat.png" class="img-fluid rounded border border-secondary mb-3 w-100" alt="Media Asset 5" />
+                <img src="~/images/1ST HRPTA Meeting PubMat (1).png" class="img-fluid rounded border border-secondary mb-3 w-100" alt="Media Asset 6" />
+                <img src="~/images/1.png" class="img-fluid rounded border border-secondary mb-3 w-100" alt="Media Asset 7" />
+            </div>
+
+            <div class="d-block d-md-none">
+                <img src="~/images/JANUARY FB PFP + WALL COVER-1.png" class="img-fluid rounded border border-secondary mb-3 w-100" alt="Media Asset 1" />
+                <img src="~/images/JANUARY FB PFP + WALL COVER-2.png" class="img-fluid rounded border border-secondary mb-3 w-100" alt="Media Asset 2" />
+                <img src="~/images/RUMBAOA_Activity 6.png" class="img-fluid rounded border border-secondary mb-3 w-100" alt="Media Asset 3" />
+                <img src="~/images/BSCS 3-2_Branding Proposal (1).png" class="img-fluid rounded border border-secondary mb-3 w-100" alt="Media Asset 4" />
+                <img src="~/images/2TRESures CNY PubMat.png" class="img-fluid rounded border border-secondary mb-3 w-100" alt="Media Asset 5" />
+                <img src="~/images/1ST HRPTA Meeting PubMat (1).png" class="img-fluid rounded border border-secondary mb-3 w-100" alt="Media Asset 6" />
+                <img src="~/images/1.png" class="img-fluid rounded border border-secondary mb-3 w-100" alt="Media Asset 7" />
+            </div>
+        </div>
+    </div>
+</div>
+@{
+    var photoList = Enumerable.Range(1, 56)
+                              .Select(i => i.ToString("D2") + ".jpg")
+                              .OrderBy(x => Guid.NewGuid())
+                              .ToList();
+}
+
+<div class="row mt-5">
+    <div class="col-12">
+        <div class="card p-4 p-md-5 shadow-sm rounded-0">
+            <div class="d-flex justify-content-between align-items-center border-bottom border-secondary pb-3 mb-4">
+                <h3 class="fw-bold mb-0">Captured Photographs</h3>
+                <span class="badge badge-category px-3 py-2 rounded-0">Photo Gallery</span>
+            </div>
+
+            <div style="column-count: 3; column-gap: 0.75rem;" class="d-none d-md-block">
+                @foreach (var fileName in photoList)
+                {
+                    <img src="~/images/@fileName"
+                         class="img-fluid border border-secondary mb-3 w-100 d-block rounded-0"
+                         alt="Photography Capture"
+                         loading="lazy" />
+                }
+            </div>
+
+            <div class="d-block d-md-none">
+                @foreach (var fileName in photoList)
+                {
+                    <img src="~/images/@fileName"
+                         class="img-fluid border border-secondary mb-3 w-100 d-block rounded-0"
+                         alt="Photography Capture"
+                         loading="lazy" />
+                }
+            </div>
+        </div>
     </div>
 </div>
