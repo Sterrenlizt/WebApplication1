@@ -1,4 +1,5 @@
-﻿@{
+﻿@model WebApplication1.Models.ProfileModel
+@{
     ViewData["Title"] = "Olivia's Edit Portfolio";
 }
 <div class="profile-bg">
@@ -6,15 +7,15 @@
         <h2 class="text-center"><b>About Me</b></h2>
         <section class="about-me">
                 <div>
-                <p>Name: </p>
-                <p>Age: </p>
-                <p>Education: </p>
-                <p>Tools: </p>
-                <p>Hobbies: </p>
-                <p>Interests: </p>
+                <p><b>Name:</b> @Model.Name</p>
+                <p><b>Age:</b> @Model.Age</p>
+                <p><b>Education:</b> @Model.Education</p>
+                <p><b>Tools:</b> @Model.Tools</p>
+                <p><b>Hobbies:</b> @Model.Hobbies</p>
+                <p><b>Interests:</b> @Model.Interests</p>
             </div>
-            <div class="img-center">
-                <img src="/images/pfp.jpg" height="150" />
+            <div class="img">
+                <img src="@Model.ImagePath" height="200"/>
             </div>
         </section>
     </header>
