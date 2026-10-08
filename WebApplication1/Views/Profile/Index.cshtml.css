@@ -1,0 +1,28 @@
+﻿.profile-bg {
+    background-image: url("/images/bg_image.jpg");
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: cover;
+    min-height: 100vh;
+    width: 100%;
+    padding: 60px;
+}
+
+.bg-section {
+    background-color: rgba(0,0,0,0.6);
+    padding: 10px 20px;
+    margin-bottom: 20px;
+    color: white;
+    font-family: 'Courier New', sans-serif;
+}
+
+.about-me{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+}
+.img-center {
+    margin-bottom: auto;
+    margin-left: auto;
+    margin-right: auto;
+}
