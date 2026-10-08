@@ -1,4 +1,4 @@
-# WebApplication1
+# mvc-project
 
 Class Project for Application Development and Emerging Technologies
 
