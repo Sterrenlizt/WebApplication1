@@ -29,3 +29,88 @@ body {
 .form-floating > .form-control-plaintext:focus::placeholder, .form-floating > .form-control:focus::placeholder {
   text-align: start;
 }
+
+/* Sleek Dark Theme Palette */
+:root {
+    --bg-main: #121418; /* Deep slate/graphite body background */
+    --bg-card: #1c2026; /* Slightly lighter surface for cards and navbar */
+    --text-primary: #e6e8ec; /* Soft off-white for crisp, readable headers */
+    --text-muted: #9da6b5; /* Low-contrast grayish blue for body text */
+    --accent-teal: #2dd4bf; /* Clean teal badge accent */
+    --border-subtle: #2d333d; /* Low-contrast borders */
+}
+
+/* Body & Layout Defaults */
+body {
+    background-color: var(--bg-main) !important;
+    color: var(--text-primary) !important;
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+}
+
+/* Navigation Bar */
+.navbar {
+    background-color: var(--bg-card) !important;
+    border-bottom: 1px solid var(--border-subtle) !important;
+}
+
+.navbar-brand,
+.nav-link {
+    color: var(--text-primary) !important;
+}
+
+    .nav-link:hover {
+        color: var(--accent-teal) !important;
+    }
+
+/* Cards & UI Panels */
+.card {
+    background-color: var(--bg-card) !important;
+    border: 1px solid var(--border-subtle) !important;
+    color: var(--text-primary) !important;
+    border-radius: 0 !important; /* Sharp corners */
+}
+
+/* Headings & Text Helpers */
+h1, h2, h3, h4, h5, h6, .card-title {
+    color: #ffffff !important;
+}
+
+p, .text-muted, .text-secondary {
+    color: var(--text-muted) !important;
+}
+
+/* Sharp Accent Buttons */
+.btn-custom {
+    background-color: transparent;
+    color: var(--accent-teal);
+    border: 1px solid var(--accent-teal);
+    border-radius: 0;
+    transition: all 0.2s ease-in-out;
+}
+
+    .btn-custom:hover {
+        background-color: var(--accent-teal);
+        color: #121418;
+    }
+
+/* Tech Badges & Tags */
+.badge-tech {
+    background-color: #252b34 !important;
+    color: var(--accent-teal) !important;
+    border: 1px solid #363e4c !important;
+    border-radius: 0 !important;
+}
+
+.badge-category {
+    background-color: #1e293b !important;
+    color: #38bdf8 !important;
+    border: 1px solid #334155 !important;
+    border-radius: 0 !important;
+}
+
+/* Make all cards, badges, and buttons square */
+.card,
+.badge,
+.btn {
+    border-radius: 0 !important;
+}
