@@ -31,7 +31,7 @@ namespace WebApplication1.Controllers
                         TechStack = new List<string> { "ASP.NET Core MVC", "C#", "SQL Server", "Bootstrap" },
                         Category = "Hackathon / Health Technology",
                         Url = "https://drive.google.com/drive/folders/1KFCJ8u2IWVqE1wMqVDtbaeN-R1lM89gZ"
-                    },
+                    },                    
                     new Portfolio_View_Model.ProjectItem
                     {
                         Id = 2,
@@ -41,6 +41,16 @@ namespace WebApplication1.Controllers
                         TechStack = new List<string> { "Typescript", "JavaScript", "HTML" },
                         Category = "Environmental Web Application / Data Visualization",
                         Url = "https://biotrack-ph.figma.site/"
+                    }, 
+                    new Portfolio_View_Model.ProjectItem
+                    {
+                        Id = 3,
+                        Title = "LinAlg Final Project",
+                        Subtitle = "Programming Assignment",
+                        Description = "Our linear algebra final project, a program that finds the Four Fundamental Spaces of an m-by-n matrix.",
+                        TechStack = new List<string> { "HTML", "CSS", "Python" },
+                        Category = "Academic Project / Mathematics",
+                        Url = "https://github.com/RavenJazz/linear-algebra-final-project.git"
                     }
                 }
             };
